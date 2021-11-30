@@ -49,20 +49,20 @@ canvas.addEventListener("mousemove", (e)=>{
 });
 
 // 4
-document.addEventListener("keydown", ()=>{
-	if (event.key == "Backspace"){
+document.addEventListener("keydown", (e)=>{
+	if (e.key == ' '){
 		ctx.clearRect(0,0,canvas.width, canvas.height);
 		console.log("clear canvas");
 	}
 });
 
 // 5
-document.addEventListener("keydown", ()=>{
-	if (event.key == "ArrowUp"){
+document.addEventListener("keydown", (e)=>{
+	if (e.key == "ArrowUp"){
 		console.log("up");
 		isdrawing = false;
 	}
-	if (event.key == "ArrowDown"){
+	if (e.key == "ArrowDown"){
 		console.log("down");
 		isdrawing = true;
 	}
@@ -70,22 +70,22 @@ document.addEventListener("keydown", ()=>{
 
 // 3
 function changecolor(){
-	document.addEventListener('keydown', ()=>{
+	document.addEventListener('keydown', (e)=>{
 		isdefault = false;
-		if (event.key == "b"){
+		if (e.key == "b"){
 			//ctx.save();
 			ctx.fillStyle = "rgb(0,0,255)";
 			console.log("change blue");
 		}
-		if (event.key == 'r'){
+		if (e.key == 'r'){
 			ctx.fillStyle = "rgb(255,0,0)";
 			console.log("change red");
 		}
-		if(event.key == 'g'){
+		if(e.key == 'g'){
 			ctx.fillStyle = "rgb(0,128,0)";
 			console.log("change green");
 		}
-		if(event.key == 'y'){
+		if(e.key == 'y'){
 			ctx.fillStyle = "rgb(255,255,0)";
 			console.log("change yellow");
 		}
